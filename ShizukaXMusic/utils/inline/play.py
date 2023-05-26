@@ -6,23 +6,38 @@ import random
 
 
 selections = [
+
     "▁▄▂▇▄▅▄▅▃",
+
     "▁▃▇▂▅▇▄▅▃",
-    "▃▁▇▂▅▃▄▃▅",
+
+    "▃▁▇▂▅▃▄▃▅",   
+
     "▃▄▂▄▇▅▃▅▁",
-    "▁▃▄▂▇▃▄▅▃",
+
+    "▁▃▄▂▇▃▄▅▃",   
+
     "▃▁▄▂▅▃▇▃▅",
-    "▁▇▄▂▅▄▅▃▄",
+
+    "▁▇▄▂▅▄▅▃▄",   
+
     "▁▃▅▇▂▅▄▃▇",
-    "▃▅▂▅▇▁▄▃▁",
+
+    "▃▅▂▅▇▁▄▃▁",  
+
     "▇▅▂▅▃▄▃▁▃",
-    "▃▇▂▅▁▅▄▃▁",
+
+    "▃▇▂▅▁▅▄▃▁",  
+
     "▅▄▇▂▅▂▄▇▁",
-    "▃▅▂▅▃▇▄▅▃",
+
+    "▃▅▂▅▃▇▄▅▃",  
+
 ]
+        
 
 
-## After Edits with Timer Bar
+
 
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
@@ -40,7 +55,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/itz-star-boi/ShizukaXMusic"
+                text="•ᴏᴡɴᴇʀ•" , url=f"https://t.me/EAGLE_BACK"
             ),
         ],
         [
@@ -48,8 +63,17 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_GROUP}"),
+            InlineKeyboardButton(text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ", url=f"{SUPPORT_GROUP}"),
         ],
+        [
+            InlineKeyboardButton(
+
+                text=_["H_B_5"], callback_data="close"
+
+            )
+
+        ],
+
     ]
     return buttons
 
@@ -68,16 +92,36 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/itz-star-boi/ShizukaXMusic"),
+            InlineKeyboardButton(text="•ᴏᴡɴᴇʀ•", url=f"https://t.me/EAGLE_BACK"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_GROUP}"),
+            InlineKeyboardButton(text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ", url=f"{SUPPORT_GROUP}"),
         ],
-    ]
+        [
+
+            InlineKeyboardButton(
+
+                text=_["H_B_5"], callback_data="close"
+
+            )
+
+        ],
+
+    ]                        
+
+
+
+            
+
+        
+
+    
+            
+        
     return buttons
 
 
@@ -91,14 +135,19 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="🌹 sᴏᴜʀᴄᴇ 🌹", url=f"https://github.com/itz-star-boi/ShizukaXMusic"),
+            InlineKeyboardButton(text="•ᴏᴡɴᴇʀ•", url=f"https://t.me/EAGLE_BACK"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_GROUP}"),
+            InlineKeyboardButton(text="ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ", url=f"{SUPPORT_GROUP}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["H_B_5"], callback_data="close"
+            )
         ],
     ]
     return buttons
